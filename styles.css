@@ -1,37 +1,53 @@
-html,body {
-    width:100vw;
+html,
+body {
+    width: 100vw;
     height: 100vh;
     margin: 0;
 }
-#text{
-    height: 4em;
-  padding-top: 2em;
-  opacity: 0.5;
-  background: black;
-  border-top: 3px solid #ccc;
-  border-bottom: 3px solid #ccc;
-  margin-top: 5.0em;
+
+#text {
+
+    background-color: black;
+    background-size: 300px 300px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
+
 #videoBG {
-    position:fixed;
+    position: fixed;
     z-index: -1;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
 }
+
 @media (min-aspect-ratio: 16/9) {
     #videoBG {
-        width:100%;
+        width: 100%;
         height: auto;
     }
 }
+
 @media (max-aspect-ratio: 16/9) {
-    #videoBG { 
-        width:auto;
+    #videoBG {
+        width: auto;
         height: 100%;
     }
 }
+
 @media (max-width: 767px) {
     #videoBG {
         display: none;
     }
+
     body {
         background: url('pill.PNG');
         background-size: cover;
