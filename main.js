@@ -144,8 +144,37 @@ function areCurrentAmountsOkayDaily(ingredientToCheck){
 
 function sendDataToDisplayWeb(){
     //parse currentMG to display stats
+
     let myStatDiv = document.getElementById("updatedStatistics");
-    let tempHeader = document.createElement("h2");
+    myStatDiv.innerHTML="";
+    allUpdates.forEach(dataStructObj =>{
+        let tempHeader = document.createElement("h2");
+        tempHeader.innerHTML="Dosage taken at: " + dataStructObj.timestamp.toString();
+
+        let tempUL = document.createElement("ul");
+
+        let medicationList = document.createElement("li");
+        medicationList.innerHTML="Medication: " + dataStructObj["Medication"];
+        tempUL.appendChild(medicationList);
+
+        let painList = document.createElement("li");
+        painList.innerHTML="Pain Impulse: " + dataStructObj["Pain Impulse"];
+        tempUL.appendChild(painList);
+
+        let painIntensity = document.createElement("li");
+        painIntensity.innerHTML="Pain Intensity: " + dataStructObj["Pain Intensity"];
+        tempUL.appendChild(painIntensity);
+
+        let quantityList = document.createElement("li");
+        quantityList.innerHTML="Quantity Consumed: " + dataStructObj["Quantity Consumed"] + "mg";
+        tempUL.appendChild(quantityList);
+
+        myStatDiv.appendChild(tempHeader);
+        myStatDiv.appendChild(tempUL);
+        
+
+    });
+    
 
 }
 
