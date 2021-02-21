@@ -6,7 +6,7 @@ const drugsAndIngredients =
 
     "codeine": {
         "acetaminophen": 0.909,
-        "codeine Phosphate": 0.0909 
+        "codeine phosphate": 0.0909 
     },
 
     "fentanyl": {
@@ -15,12 +15,12 @@ const drugsAndIngredients =
 
     "vicodin": {
         "fentanyl": 0.004975124378109,
-        "acetominophen": 0.995024875621891
+        "acetaminophen": 0.995024875621891
     },
 
-    "hydrocone acetominophen": {
+    "hydrocone acetaminophen": {
         "hydrocodone bitartrate": 0.004975124378109,
-        "acetominophen": 0.995024875621891
+        "acetaminophen": 0.995024875621891
     },
 
     "hydromorphone hydrochloride" : {

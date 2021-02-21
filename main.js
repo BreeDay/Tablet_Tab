@@ -81,7 +81,7 @@ function userSentData(drugTaken, dosageMG) {
     dataStructurePrepared = {}; //clear values
     const currDate = new Date();
     let newObj = {};
-    newObj["timestamp"]= currDate.getTime();
+    newObj["timestamp"]= currDate;
 
     Object.keys(tempDataStruct).forEach(key =>{
         newObj[key] = tempDataStruct[key];
@@ -142,8 +142,11 @@ function areCurrentAmountsOkayDaily(ingredientToCheck){
     
 }
 
-function sendDataToDisplayWeb(){ //called when webpage is loaded
+function sendDataToDisplayWeb(){
     //parse currentMG to display stats
+    let myStatDiv = document.getElementById("updatedStatistics");
+    let tempHeader = document.createElement("h2");
+
 }
 
 
